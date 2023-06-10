@@ -2,7 +2,14 @@ document.getElementById('btn-deposite').addEventListener('click',function(){
     const depositeMoney = document.getElementById('deposite-field')
     const newDepositeAmountString = depositeMoney.value;
     const newDepositeAmount = parseFloat(newDepositeAmountString);
-    
+    depositeMoney.value = '';
+
+    console.log(newDepositeAmount);
+    if(isNaN(newDepositeAmount)){
+        alert('input a vaild number')
+        return;
+    }
+
     const depositeTotalElement = document.getElementById('deposite-total');
     const previousDepositeTotalString=depositeTotalElement.innerText;
     // console.log(depositeTotal
@@ -20,6 +27,6 @@ document.getElementById('btn-deposite').addEventListener('click',function(){
     totalAmount.innerText = totalBankAmount;
 
     // newDepositeAmount
-    depositeMoney.value = '';
+    
     
 })
