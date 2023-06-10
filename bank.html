@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>bank inside</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="text-5xl text-center">
+        welcome to your
+        <span class="font-black text-zinc-400">baper Bank</span>!!!
+      </h1>
+    </header>
+    <main>
+      <section class="mt-12">
+        <div
+          class="grid grid-cols-3 gap-4 text-white mx-auto w-9/12 rounded-md"
+        >
+          <div class="bg-teal-300 p-8 rounded-lg">
+            <h1 class="text-2xl">Deposite</h1>
+            <p class="text-5xl">$<span id="deposite-total">00</span></p>
+          </div>
+          <div class="bg-red-300 p-8 rounded-lg">
+            <h1 class="text-2xl">Withdraw Now</h1>
+            <p class="text-5xl">$ <span id="total-withdraw">00</span></p>
+          </div>
+          <div class="bg-green-300 p-8 rounded-lg">
+            <h1 class="text-2xl">Total Amount</h1>
+            <p class="text-5xl">$ <span id="total-balance">1200</span></p>
+          </div>
+        </div>
+      </section>
+      <section class="mt-12">
+        <!--  deposite withdraw -->
+        <div
+          class="grid grid-cols-2 gap-4 text-black mx-auto w-9/12 rounded-md"
+        >
+          <div class="bg-purple-300 p-8 rounded-lg">
+            <h1 class="text-2xl pb-3">Please Deposite</h1>
+            <input
+              id="deposite-field"
+              class="block w-9/12 px-3 mb-2"
+              type="number"
+              placeholder="enter $ amount"
+            />
+            <button
+              id="btn-deposite"
+              class="bg-blue-700 text-white shadow-md px-4 py-2 hover:bg-sky-300 rounded-md"
+            >
+              Depsite
+            </button>
+          </div>
+
+          <div class="bg-purple-300 p-8 rounded-lg">
+            <h1 class="text-2xl pb-3">Please withdraw</h1>
+            <input
+              class="block w-9/12 px-3 mb-2"
+              id="withdraw-field"
+              type="number"
+              placeholder="enter $ amount"
+            />
+            <button
+              id="btn-withdraw"
+              class="bg-blue-700 text-white px-4 py-2 hover:bg-sky-300 rounded-md px-4"
+            >
+              Withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="js/dipsite.js"></script>
+    <script src="js/withdrow.js"></script>
+  </body>
+</html>
